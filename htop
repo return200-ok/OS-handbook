@@ -1,0 +1,7 @@
+M %MEM
+N PID
+P %CPU
+T TIME+
+
+top -o %MEM
+htop -s %MEM
