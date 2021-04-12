@@ -9,3 +9,7 @@ du -bsh * |sort -hr
 ps -o nlwp <pid>
 ps -eo nlwp | tail -n +2 | awk '{ num_threads += $1 } END { print num_threads }'
 ```
+##Restart printer service
+```bash
+sudo service cups restart
+```
