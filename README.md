@@ -13,3 +13,7 @@ ps -eo nlwp | tail -n +2 | awk '{ num_threads += $1 } END { print num_threads }'
 ```bash
 sudo service cups restart
 ```
+##Clear cache page
+```bash
+sync; echo 1 > /proc/sys/vm/drop_caches
+```
