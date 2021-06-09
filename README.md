@@ -13,7 +13,7 @@ ps -o nlwp <pid>
 ```bash
 ps -eo nlwp | tail -n +2 | awk '{ num_threads += $1 } END { print num_threads }'
 ```
-##Max threads on server
+##Max threads on server= (max_threads = mempages / (8 * THREAD_SIZE / PAGE_SIZE);)
 ```bash
 cat /proc/sys/kernel/threads-max
 ```
