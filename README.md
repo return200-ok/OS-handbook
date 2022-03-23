@@ -25,3 +25,8 @@ sudo service cups restart
 ```bash
 sync; echo 1 > /proc/sys/vm/drop_caches
 ```
+##make some data change
+```bash
+rm -f data/file5
+fallocate -l 10K data/file6
+```
