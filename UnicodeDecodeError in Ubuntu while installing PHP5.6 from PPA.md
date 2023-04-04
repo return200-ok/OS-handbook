@@ -1,3 +1,5 @@
+Issue `UnicodeDecodeError in Ubuntu while installing PHP5.6 from PPA.md` on ubuntu 14.04
+
 ```
 root@xxx:~# apt-add-repository ppa:ondrej/php5-5.6 -y
 
