@@ -1,0 +1,8 @@
+# number open ports
+root@10-12-10-29:~# netstat -tuln | grep -Eo ':[0-9]+' | cut -d: -f2 | sort -n | uniq | wc -l
+31
+
+
+# number open network connections
+root@10-12-10-29:~# netstat -n | grep -c '^tcp\|udp'
+173252
