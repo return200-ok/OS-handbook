@@ -6,3 +6,18 @@ gci -Directory `
   | sort Size -Descending `
   | ft @{l='Size [MB]'; e={'{0:N2}    ' -f ($_.Size / 1MB)}},FullName
 ```
+
+
+# check service is using which port
+```
+netsh http show servicestate | Select-String "1088"
+```
+more context:
+```
+netsh http show servicestate | Select-String "1088" -Context 2
+```
+
+# Kill pid
+```
+taskkill /PID 2356 /F
+```
