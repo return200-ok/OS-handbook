@@ -21,3 +21,6 @@ netsh http show servicestate | Select-String "1088" -Context 2
 ```
 taskkill /PID 2356 /F
 ```
+
+# get cpu starttime
+Get-Process -Name chrome | Select-Object Id, ProcessName, StartTime, @{Name="CPU(s)";Expression={$_.CPU}}
