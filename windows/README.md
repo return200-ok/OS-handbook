@@ -24,3 +24,11 @@ taskkill /PID 2356 /F
 
 # get cpu starttime
 Get-Process -Name chrome | Select-Object Id, ProcessName, StartTime, @{Name="CPU(s)";Expression={$_.CPU}}
+
+
+#IIS 
+# Remove IIS Sites ending with "_dev"
+Get-IISSite | Where-Object { $_.Name -like "*_Development" } | ForEach-Object {
+    Write-Host "Removing site: $($_.Name)"
+    Remove-IISSite -Name $_.Name -Confirm:$false
+}
