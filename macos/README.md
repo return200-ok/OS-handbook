@@ -29,3 +29,6 @@ brew install --cask telegram
 
 ## Install Remote Desktop Manager
 brew install --cask remote-desktop-manager
+
+## Install Microsoft Remote Desktop
+brew install --cask microsoft-remote-desktop
